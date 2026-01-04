@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- PAGE 1 WRAPPER -->
+<div id="page1" class="page active">
+
+  <div id="landingPage">
+
+    <!-- Animated Title -->
+    <h1 class="mainTitle" id="animatedTitle"></h1>
+
+    <!-- Dialogue Boxes -->
+    <div class="dialogue" id="dialogue1">
+      <p>Are you my best friend? <br> (P.S click no once)</p>
+      <div class="buttons">
+        <button onclick="handleAnswer('dialogue1','yes')">Yes</button>
+        <button onclick="handleAnswer('dialogue1','no')">No</button>
+      </div>
+    </div>
+
+    <div class="dialogue hidden" id="dialogue2">
+      <p>
+        You don’t get to click no, you’re mine…<br>
+        Clicked no, hmph ☹️. Choose again.<br>
+        (P.S click no just once more!)
+      </p>
+      <div class="buttons">
+        <button onclick="handleAnswer('dialogue2','yes')">Yes</button>
+        <button onclick="handleAnswer('dialogue2','no')">No</button>
+      </div>
+    </div>
+
+    <div class="dialogue hidden" id="dialogue3">
+      <p>
+        Again you clicked no, why man… you hate me so much ☹️?
+        I thought you loved me 😭.
+        It’s fine, but you don’t get to get rid of me, you’re stuck…
+      </p>
+      <div class="buttons">
+        <button onclick="handleAnswer('dialogue3','yes')">Yes</button>
+        <button onclick="handleAnswer('dialogue3','no')">No</button>
+      </div>
+    </div>
+
+    <!-- Special dialogue if yes clicked first -->
+    <div class="dialogue hidden" id="dialogueYesFirst">
+      <p>Didn’t listen to me 😭☹️</p>
+      <div class="buttons">
+        <button onclick="handleAnswer('dialogueYesFirst','tryAgain')">Try again</button>
+      </div>
+    </div>
+
+    <!-- Good gurl text -->
+    <div class="goodGurl hidden" id="goodGurl">Good gurl 😆</div>
+
+    <!-- Space -->
+    <canvas id="spaceCanvas"></canvas>
+    <div id="whiteMoon"></div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

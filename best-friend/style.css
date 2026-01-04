@@ -1,0 +1,123 @@
+/* ================= GLOBAL ================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(180deg, #1a1b2f, #2a3a5b);
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ================= PAGE SYSTEM ================= */
+.page {
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}
+
+.page.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ================= CANVAS (STARS) ================= */
+#spaceCanvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* ================= MOON ================= */
+#whiteMoon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  top: 80px;
+  right: 60px;
+  z-index: 1;
+  box-shadow: 0 0 15px rgba(255,255,255,0.7);
+}
+
+/* ================= TITLE ================= */
+.mainTitle {
+  color: #7FDBFF;
+  font-size: 2.8em;
+  text-align: center;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: pre-wrap;
+  overflow: hidden;
+  border-right: 4px solid rgba(127,219,255,0.7);
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+  position: relative;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.5);
+}
+
+/* ================= DIALOGUES ================= */
+.dialogue {
+  background-color: #82a3b9;
+  color: #fff;
+  padding: 25px 20px;
+  border-radius: 20px;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: opacity 0.5s ease;
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ================= BUTTONS ================= */
+.buttons {
+  margin-top: 15px;
+}
+
+.buttons button {
+  background-color: #5c7a92;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 15px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.buttons button:hover {
+  transform: scale(1.1);
+  background-color: #3a5f7d;
+}
+
+/* ================= GOOD GURL ================= */
+.goodGurl {
+  font-size: 1.5em;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
